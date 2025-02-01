@@ -55,7 +55,7 @@ const gameController = (function () {
             console.log('Invalid');
             
         }
-        
+
         if (updatedValue === undefined) {
             console.log('Already taken, choose another place');
 
@@ -146,3 +146,45 @@ const gameController = (function () {
     }
 
 })();
+
+
+
+const cells = document.querySelectorAll('.cell');
+const messages = document.querySelector('.messages');
+const resetBtn = document.getElementById('reset-btn');
+
+cells.forEach(cell => {
+    cell.addEventListener('click', handleCellClick);
+});
+
+resetBtn.addEventListener('click', startTheGame);
+
+function handleCellClick(e){
+    const index = parseInt(e.target.getAttribute('data-index'));
+    gameController.makeMove(index);
+    updateDisplayBoard();
+}
+
+function updateDisplayBoard(){
+    const board = gameBoard.getBoard();
+    cells.forEach(cell => {
+        cell.textContent = board[index];
+    });
+    updateMessage();
+}
+
+function updateMessage(){
+    messages.textContent = `${gameController.currentPlayer.name}'s turn`
+}
+
+function startTheGame(){
+    gameController.startGame();
+    updateDisplayBoard();
+    messages.textContent = `${gameController.currentPlayer.name}'s turn`
+}
+
+
+startTheGame();
+// document.addEventListener('DOMContentLoaded',function(){
+//     displayGame();
+// });
