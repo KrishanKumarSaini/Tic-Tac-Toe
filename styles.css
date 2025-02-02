@@ -1,0 +1,124 @@
+/* Resetting some default browser styles */
+body,
+main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gameName {
+    font-size: 1.7em;
+    color: #2980b9;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+.player-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.player-inputs label {
+    font-weight: bold;
+ }
+
+ .player-inputs input {
+     padding: 8px;
+     margin-bottom: 10px;
+ }
+
+/* Styling the game display */
+#gamedisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 315px; /* set this width to be greater or equal to your board width*/
+}
+
+/* Styling the board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+/* Hover Effect for cells */
+.cell:hover {
+    background-color: #ddd;
+}
+
+/* Messages Styles */
+.messages {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button#start-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button#start-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Button Styles */
+button#reset-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+button#reset-btn:hover {
+    background-color: #2980b9;
+}
