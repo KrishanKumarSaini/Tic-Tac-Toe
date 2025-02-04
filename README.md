@@ -23,7 +23,6 @@ A classic Tic-Tac-Toe game implemented using HTML, CSS, and JavaScript.  This pr
 *   A "Reset Game" button to restart the game.
 *   Player name input fields.
 *   Basic styling using CSS.
-*   Responsive design (Optional - add this if your CSS supports it).
 
 ## How to Play
 
@@ -39,27 +38,6 @@ A classic Tic-Tac-Toe game implemented using HTML, CSS, and JavaScript.  This pr
 *   **HTML:**  Provides the structure and elements of the game board and interface.
 *   **CSS:**  Styles the game board, buttons, and text for a visually appealing experience.
 *   **JavaScript:** Implements the game logic, handles user input, updates the game board, and determines the winner.  The core game logic is contained in the `gameBoard` and `gameController` modules.
-
-## Project Structure
-
-The project consists of the following files:
-
-*   `index.html`: The main HTML file containing the structure of the game.
-*   `style.css`:  The CSS file containing the styles for the game.
-*   `script.js`: The JavaScript file containing the game logic. It's structured as follows:
-
-    *   **`gameBoard` Module:**
-        *   Manages the game board state (represented as an array).
-        *   Provides functions to get the board state, update a cell with a mark, and reset the board.
-    *   **`gameController` Module:**
-        *   Manages the game flow, player turns, and win/draw conditions.
-        *   Includes functions to:
-            *   Create player objects (with names and marks).
-            *   Handle player moves (`makeMove`).
-            *   Check for a winner (`checkWinner`).
-            *   Check for a draw (`checkDraw`).
-            *   Start and reset the game (`startGame`).
-        *   Attaches event listeners to the cells and buttons to handle user interactions.
 
 ## Setup and Installation
 
@@ -87,23 +65,4 @@ The `script.js` file uses the module pattern to encapsulate the game logic.  Her
 
 ## Credits
 
-*   This project was created by [Your Name/GitHub Username].
-
-## License
-
-This project is licensed under the [Choose a license, e.g., MIT License] - see the `LICENSE` file for details (if you have one).  If you don't have a license file, consider adding one (e.g., the MIT license is permissive and easy to use).
-
----
-
-**To customize this README:**
-
-*   **Replace placeholders:**  Fill in `[your repository URL]`, `[Your Name/GitHub Username]`, and `[Choose a license, e.g., MIT License]` with your actual information.
-*   **Add a live demo link:** If you have deployed the game online, include a link to the live demo.
-*   **Include screenshots or GIFs:** Visuals can greatly enhance your README.
-*   **Add more details about the code:**  If there are specific algorithms or techniques you used that are interesting, explain them further.
-*   **Mention any known issues or limitations:**  Be transparent about any problems with the game.
-*   **Add instructions for contributing:**  If you're open to contributions, explain how others can contribute to the project.
-*   **Update the "Technologies Used" section:** If you used any external libraries or frameworks, list them here.
-*   **Include Source Maps information** If you've used terser with name mangling you'll need to add instructions on using the `.map` files for debugging purposes.
-
-This README provides a good starting point.  Tailor it to your specific project and audience. Good luck!
+*   This project was created with the help of TOP course.
