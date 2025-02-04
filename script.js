@@ -133,13 +133,13 @@ const gameController = (function () {
     //Deals with starting the game
     function startGame() {
 
-        if(player1Input.value === '' && player2Input.value === ''){
+        if (player1Input.value === '' && player2Input.value === '') {
             document.getElementById('gamedisplay').style.display = 'none';
             document.querySelector('.player-inputs').style.display = 'block';
-        }else{
+        } else {
             document.getElementById('gamedisplay').style.display = 'block';
             document.querySelector('.player-inputs').style.display = 'none';
-        
+
 
             const player1Name = player1Input.value.trim() || 'Player 1';
             const player2Name = player2Input.value.trim() || 'Player 2';
@@ -174,14 +174,14 @@ const gameController = (function () {
 
     function handleCellClick(e) {
         const index = parseInt(e.target.getAttribute('data-index'));
-        if(gameController.makeMove(index)){
+        if (gameController.makeMove(index)) {
             renderBoard();
         };
     }
 
-    function renderBoard(){
+    function renderBoard() {
         const board = gameBoard.getBoard();
-        cells.forEach((cell,index) => {
+        cells.forEach((cell, index) => {
             cell.textContent = board[index]
         });
     }
